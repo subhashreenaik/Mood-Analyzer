@@ -18,24 +18,29 @@ String message;
 	/*
 	 * This method is used to check the mood sad ,happy.
 	 * If mood is null then it will throw null pointer exception
+	 * and custom exception
 	 */
-	public String enalyzeEmotion() {
+	public String enalyzeEmotion() throws MoodAnalyzerException {
 		try {
+		
 		if(message.contains("I am in sad mood")) {
 			return "sad";
 		}
+	
 		
-		else if(message.contains("I am in any mood")) {
+		if(message.contains("I am in any mood")) {
 			return "happy";
-			
 		}
 		return null;
-	}
-		
-		catch(NullPointerException e) {
-			return "Invalid mood";
 		}
-	
-	
-	}
+		catch(NullPointerException e) {
+			throw new MoodAnalyzerException("Invalid mood");
+		}
 }
+}
+		
+	
+	
+	
+	
+
