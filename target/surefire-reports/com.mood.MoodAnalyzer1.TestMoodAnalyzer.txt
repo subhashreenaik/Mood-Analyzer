@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.mood.MoodAnalyzer1.TestMoodAnalyzer
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.003 s <<< FAILURE! - in com.mood.MoodAnalyzer1.TestMoodAnalyzer
+testAnalyze(com.mood.MoodAnalyzer1.TestMoodAnalyzer)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.Exception: Unexpected exception, expected<java.lang.Exception> but was<java.lang.AssertionError>
+	at com.mood.MoodAnalyzer1.TestMoodAnalyzer.testAnalyze(TestMoodAnalyzer.java:14)
+
