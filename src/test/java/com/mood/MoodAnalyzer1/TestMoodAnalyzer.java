@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class TestMoodAnalyzer {
 	/**
-	 * UC1
+	 * 
 	 * This test case to check whether the user is happy.
 	 * If happy then it will be true ,if sad then it will be false
 	 */
@@ -21,6 +21,15 @@ public class TestMoodAnalyzer {
 	public void testMoodAnalyzerHappy() {
 		MoodAnalyzer mood=new MoodAnalyzer("I am in any mood");
 		assertEquals("happy",mood.enalyzeEmotion() );
+	    
+	}
+	/*
+	 * UC2 checking null pointer exception here
+	 */
+	@Test
+	public void testMoodAnalyzerNull() {
+		MoodAnalyzer mood=new MoodAnalyzer(null);
+		assertEquals("Invalid mood",mood.enalyzeEmotion() );
 	    
 	}
 
